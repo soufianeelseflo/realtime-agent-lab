@@ -1,3 +1,5 @@
+Status: Active public development.
+
 # Realtime Agent Lab
 
 Realtime Agent Lab is an open-source desktop harness for capturing, replaying, and evaluating real-time multimodal AI-agent sessions.

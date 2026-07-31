@@ -1,0 +1,54 @@
+{
+  "specVersion": "1.0",
+  "id": "interruption-ar",
+  "language": "ar-MA",
+  "startedAt": "2026-08-01T00:00:00.000Z",
+  "metadata": {
+    "scenario": "barge-in",
+    "expected": "pass"
+  },
+  "events": [
+    {
+      "at": 0,
+      "type": "consent.granted"
+    },
+    {
+      "at": 10,
+      "type": "connection.opened"
+    },
+    {
+      "at": 100,
+      "type": "capture.audio.start"
+    },
+    {
+      "at": 500,
+      "type": "user.speech.start"
+    },
+    {
+      "at": 1200,
+      "type": "user.speech.end",
+      "turnId": "u1"
+    },
+    {
+      "at": 1550,
+      "type": "agent.response.start",
+      "turnId": "a1",
+      "inReplyTo": "u1"
+    },
+    {
+      "at": 2300,
+      "type": "user.interruption"
+    },
+    {
+      "at": 2600,
+      "type": "agent.response.stop",
+      "turnId": "a1"
+    },
+    {
+      "at": 3000,
+      "type": "agent.response.end",
+      "turnId": "a2",
+      "text": "حاضر، تفضل."
+    }
+  ]
+}

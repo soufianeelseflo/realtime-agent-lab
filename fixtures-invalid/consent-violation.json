@@ -1,0 +1,28 @@
+{
+  "specVersion": "1.0",
+  "id": "consent-violation",
+  "language": "en-US",
+  "startedAt": "2026-08-01T00:00:00.000Z",
+  "metadata": {
+    "scenario": "consent",
+    "expected": "invalid"
+  },
+  "events": [
+    {
+      "at": 0,
+      "type": "consent.granted"
+    },
+    {
+      "at": 100,
+      "type": "capture.audio.start"
+    },
+    {
+      "at": 500,
+      "type": "consent.revoked"
+    },
+    {
+      "at": 700,
+      "type": "user.speech.start"
+    }
+  ]
+}

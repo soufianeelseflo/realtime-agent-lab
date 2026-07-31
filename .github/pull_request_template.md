@@ -1,12 +1,9 @@
-## Summary
+## What changed
 
-## Tests
+## Failure mode or ecosystem gap
 
-## Privacy/security impact
+## Tests and fixtures
 
-## Checklist
-
-- [ ] Tests added or updated
-- [ ] No secrets, recordings, or personal data included
-- [ ] Documentation updated
-- [ ] GPL-compatible contribution
+- [ ] `npm run check` passes
+- [ ] No real customer data or secrets are included
+- [ ] Metric/spec changes are documented

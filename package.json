@@ -1,59 +1,41 @@
 {
   "name": "realtime-agent-lab",
-  "productName": "Realtime Agent Lab",
-  "version": "0.1.0",
-  "description": "Open-source desktop harness for testing, replaying, and evaluating real-time multimodal AI agents.",
-  "main": "src/index.js",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Open reliability standard, benchmark suite, CLI, and GitHub Action for real-time voice and multimodal AI agents.",
+  "workspaces": [
+    "packages/*"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
-    "start": "electron-forge start",
-    "package": "electron-forge package",
-    "make": "electron-forge make",
-    "publish": "electron-forge publish",
-    "lint": "echo \"No linting configured\"",
-    "test": "node --test tests/*.test.js",
-    "check": "node scripts/check-project.js",
-    "format": "prettier --write .",
-    "analyze:sample": "node scripts/analyze-session.js fixtures/sample-session.json"
+    "test": "node --test packages/*/test/*.test.js tests/*.test.js",
+    "lint": "node scripts/lint.js",
+    "validate:fixtures": "node packages/cli/bin/ral.js benchmark fixtures --output benchmark-results/latest.json",
+    "benchmark": "node packages/cli/bin/ral.js benchmark fixtures --output benchmark-results/latest.json",
+    "check": "npm run lint && npm test && npm run benchmark && node scripts/check-project.js",
+    "docs:build": "node scripts/build-site.js",
+    "prepack": "npm run check"
   },
   "keywords": [
     "realtime-ai",
+    "voice-agents",
     "multimodal-agents",
-    "electron",
-    "audio-capture",
-    "screen-capture",
     "agent-evaluation",
-    "session-replay",
-    "open-source"
+    "benchmark",
+    "github-action",
+    "reliability",
+    "open-standard"
   ],
-  "author": {
-    "name": "Realtime Agent Lab maintainers"
-  },
   "license": "GPL-3.0-or-later",
-  "dependencies": {
-    "@google/genai": "^1.2.0",
-    "electron-squirrel-startup": "^1.0.1",
-    "ws": "^8.19.0"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/soufianeelseflo/realtime-agent-lab.git"
   },
-  "devDependencies": {
-    "@electron-forge/cli": "^7.8.1",
-    "@electron-forge/maker-deb": "^7.8.1",
-    "@electron-forge/maker-dmg": "^7.8.1",
-    "@electron-forge/maker-rpm": "^7.8.1",
-    "@electron-forge/maker-squirrel": "^7.8.1",
-    "@electron-forge/maker-zip": "^7.8.1",
-    "@electron-forge/plugin-auto-unpack-natives": "^7.8.1",
-    "@electron-forge/plugin-fuses": "^7.8.1",
-    "@electron/fuses": "^1.8.0",
-    "@reforged/maker-appimage": "^5.0.0",
-    "electron": "^30.0.5"
+  "bugs": {
+    "url": "https://github.com/soufianeelseflo/realtime-agent-lab/issues"
   },
-  "contributors": [
-    {
-      "name": "sohzm",
-      "url": "https://github.com/sohzm/cheating-daddy"
-    },
-    {
-      "name": "Realtime Agent Lab contributors"
-    }
-  ]
+  "homepage": "https://soufianeelseflo.github.io/realtime-agent-lab/"
 }

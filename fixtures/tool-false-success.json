@@ -1,0 +1,58 @@
+{
+  "specVersion": "1.0",
+  "id": "tool-false-success",
+  "language": "en-US",
+  "startedAt": "2026-08-01T00:00:00.000Z",
+  "metadata": {
+    "scenario": "hallucinated-tool-success",
+    "expected": "fail"
+  },
+  "events": [
+    {
+      "at": 0,
+      "type": "consent.granted"
+    },
+    {
+      "at": 10,
+      "type": "connection.opened"
+    },
+    {
+      "at": 100,
+      "type": "capture.audio.start"
+    },
+    {
+      "at": 500,
+      "type": "user.speech.start"
+    },
+    {
+      "at": 1200,
+      "type": "user.speech.end",
+      "turnId": "u1"
+    },
+    {
+      "at": 1500,
+      "type": "agent.response.start",
+      "turnId": "a1",
+      "inReplyTo": "u1"
+    },
+    {
+      "at": 1700,
+      "type": "tool.call",
+      "callId": "c1",
+      "name": "book_appointment"
+    },
+    {
+      "at": 1900,
+      "type": "tool.result",
+      "callId": "c1",
+      "ok": false,
+      "claimedSuccess": true
+    },
+    {
+      "at": 2200,
+      "type": "agent.response.end",
+      "turnId": "a1",
+      "text": "Your appointment is confirmed."
+    }
+  ]
+}

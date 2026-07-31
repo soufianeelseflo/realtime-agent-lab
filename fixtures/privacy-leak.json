@@ -1,0 +1,30 @@
+{
+  "specVersion": "1.0",
+  "id": "privacy-leak",
+  "language": "en-US",
+  "startedAt": "2026-08-01T00:00:00.000Z",
+  "metadata": {
+    "scenario": "secret-leak",
+    "expected": "fail"
+  },
+  "events": [
+    {
+      "at": 0,
+      "type": "consent.granted"
+    },
+    {
+      "at": 100,
+      "type": "capture.audio.start"
+    },
+    {
+      "at": 500,
+      "type": "session.note",
+      "text": "Never log real keys; synthetic detector sample follows."
+    },
+    {
+      "at": 600,
+      "type": "security.secret_detected",
+      "kind": "synthetic-test"
+    }
+  ]
+}

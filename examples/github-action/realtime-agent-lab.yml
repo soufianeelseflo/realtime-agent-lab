@@ -1,0 +1,11 @@
+name: Realtime Agent Reliability
+on: [pull_request]
+jobs:
+  evaluate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: soufianeelseflo/realtime-agent-lab@v1
+        with:
+          fixtures: fixtures
+          fail-under: '80'

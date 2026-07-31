@@ -1,18 +1,10 @@
 # Architecture
 
-Realtime Agent Lab has four logical layers:
+1. Provider logs are normalized by adapters into RAL Session Spec 1.0.
+2. The validator rejects malformed or non-consensual event streams.
+3. The evaluator calculates deterministic metrics without network access.
+4. The CLI renders human and JSON reports.
+5. The GitHub Action enforces a project-defined score threshold.
+6. Benchmark output feeds the static documentation dashboard.
 
-1. **Capture:** Electron screen, microphone, and optional system-audio capture.
-2. **Provider transport:** provider-specific session adapters.
-3. **Session model:** normalized events for user turns, responses, interruptions, tool calls, and errors.
-4. **Evaluation:** deterministic metrics, replay, regression fixtures, and reports.
-
-The existing Gemini transport is the first provider implementation. New adapters should translate provider events into a provider-neutral schema rather than leaking provider-specific objects into the UI.
-
-Security boundaries:
-
-- renderer input must be validated before main-process use;
-- API credentials must never be logged;
-- external URLs require allow-list validation;
-- recordings and transcripts are sensitive local data;
-- consent state must gate capture.
+The evaluator is intentionally deterministic: the same session document produces the same metric values. `generatedAt` is informational and excluded from comparisons.

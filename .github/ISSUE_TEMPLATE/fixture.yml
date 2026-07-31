@@ -1,0 +1,16 @@
+name: New reliability fixture
+description: Propose a synthetic failure scenario.
+title: "fixture: "
+labels: [fixture, good first issue]
+body:
+  - type: dropdown
+    attributes:
+      label: Failure class
+      options: [Latency, Interruption, Tool reliability, Duplication, Reconnect, Consent, Privacy]
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Scenario
+    validations:
+      required: true

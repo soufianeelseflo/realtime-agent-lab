@@ -1,0 +1,49 @@
+{
+  "specVersion": "1.0",
+  "id": "slow-latency-fr",
+  "language": "fr-FR",
+  "startedAt": "2026-08-01T00:00:00.000Z",
+  "metadata": {
+    "scenario": "support",
+    "expected": "degraded"
+  },
+  "events": [
+    {
+      "at": 0,
+      "type": "consent.granted"
+    },
+    {
+      "at": 50,
+      "type": "connection.opened"
+    },
+    {
+      "at": 100,
+      "type": "capture.audio.start"
+    },
+    {
+      "at": 500,
+      "type": "user.speech.start"
+    },
+    {
+      "at": 1500,
+      "type": "user.speech.end",
+      "turnId": "u1"
+    },
+    {
+      "at": 4100,
+      "type": "agent.response.start",
+      "turnId": "a1",
+      "inReplyTo": "u1"
+    },
+    {
+      "at": 5000,
+      "type": "agent.response.end",
+      "turnId": "a1",
+      "text": "Je vérifie votre dossier."
+    },
+    {
+      "at": 5300,
+      "type": "capture.audio.stop"
+    }
+  ]
+}

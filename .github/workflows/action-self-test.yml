@@ -1,0 +1,19 @@
+name: Action Self Test
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  action:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: ./
+        with:
+          fixtures: fixtures
+          fail-under: '80'
+          report: realtime-agent-report.json
+      - name: Verify report
+        run: test -s realtime-agent-report.json

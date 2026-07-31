@@ -1,24 +1,16 @@
 # Security Policy
 
+## Supported versions
+
+| Version | Supported |
+|---|---|
+| 1.x | Yes |
+| 0.x | No |
+
 ## Reporting
 
-Do not open public issues for vulnerabilities involving credential exposure, arbitrary code execution, unsafe IPC, recording leakage, or local-file disclosure.
+Do not open a public issue for credential leakage, code execution, unsafe Electron IPC, malicious fixture handling, or privacy failures. Use GitHub private vulnerability reporting when available.
 
-Report privately through GitHub's **Report a vulnerability** feature when enabled.
+## Data safety
 
-Include:
-
-- affected version and platform;
-- reproduction steps;
-- impact;
-- proof of concept with secrets and personal data removed;
-- suggested mitigation, if known.
-
-## Maintainer priorities
-
-1. credential storage and redaction;
-2. Electron IPC validation;
-3. local recording and transcript protection;
-4. external URL handling;
-5. native audio helper integrity;
-6. dependency and packaging security.
+Use synthetic fixtures. Run `ral redact` before sharing logs. Never commit recordings, customer transcripts, API keys, authentication cookies, card data, or private screen captures.

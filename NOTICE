@@ -1,14 +1,8 @@
-# NOTICE
+Realtime Agent Lab
+Copyright (C) 2026 Realtime Agent Lab contributors
 
-Realtime Agent Lab is a modified fork of:
-
-- Project: `cheating-daddy`
-- Upstream repository: https://github.com/sohzm/cheating-daddy
-- Upstream maintainer listed in the source package: sohzm
-- Upstream license: GNU General Public License v3
-
-Fork modifications began on 2026-07-31.
-
-Major modifications include a new project identity, developer-oriented evaluation scope, consent controls, provider capability registry, session analysis utilities, tests, CI, security and contribution documentation, and a new roadmap.
-
-The upstream project and its contributors do not endorse this fork and are not responsible for its modifications.
+Realtime Agent Lab v1 is a new reliability benchmark, specification, CLI, and
+GitHub Action built in the same public repository that previously hosted an
+experimental desktop assistant derived from sohzm/cheating-daddy. Historical
+GPL notices remain available in the repository history. All current v1 source
+files are released under GPL-3.0-or-later.

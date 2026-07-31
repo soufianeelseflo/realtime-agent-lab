@@ -1,0 +1,27 @@
+name: Realtime Agent Lab
+description: Evaluate real-time voice and multimodal agent reliability in CI.
+author: Realtime Agent Lab contributors
+branding:
+  icon: activity
+  color: purple
+inputs:
+  fixtures:
+    description: Directory containing RAL Session Spec JSON fixtures.
+    required: false
+    default: fixtures
+  fail-under:
+    description: Minimum score required for every fixture.
+    required: false
+    default: '80'
+  report:
+    description: JSON report path.
+    required: false
+    default: realtime-agent-report.json
+outputs:
+  average-score:
+    description: Average score across fixtures.
+  report:
+    description: Path to the generated JSON report.
+runs:
+  using: node24
+  main: dist/index.cjs

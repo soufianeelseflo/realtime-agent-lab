@@ -1,0 +1,14 @@
+{
+  "name": "@realtime-agent-lab/cli",
+  "version": "1.0.0",
+  "type": "module",
+  "bin": {
+    "ral": "bin/ral.js"
+  },
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "@realtime-agent-lab/spec": "1.0.0",
+    "@realtime-agent-lab/evaluator": "1.0.0",
+    "@realtime-agent-lab/security": "1.0.0"
+  }
+}

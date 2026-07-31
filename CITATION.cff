@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+title: Realtime Agent Lab
+message: If you use Realtime Agent Lab in research or engineering work, cite this repository.
+type: software
+authors:
+  - family-names: Elseflo
+    given-names: Soufiane
+repository-code: https://github.com/soufianeelseflo/realtime-agent-lab
+url: https://soufianeelseflo.github.io/realtime-agent-lab/
+version: 1.0.0
+date-released: 2026-08-01
+license: GPL-3.0-or-later

@@ -1,0 +1,6 @@
+After extracting this ZIP, open PowerShell in the extracted folder and paste:
+
+powershell -ExecutionPolicy Bypass -File .\PUSH_TO_GITHUB.ps1
+
+The script backs up your current local repository, preserves its Git history,
+replaces the files, runs all checks, pushes main, and publishes v1.0.0 and v1 tags.

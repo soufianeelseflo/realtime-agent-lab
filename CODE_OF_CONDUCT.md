@@ -1,5 +1,3 @@
 # Code of Conduct
 
-Be direct, technical, and respectful. Harassment, threats, discrimination, doxxing, and disclosure of private recordings or credentials are not accepted.
-
-Project discussions should focus on reproducible evidence, user safety, maintainability, and the quality of the software.
+Be respectful, specific, and constructive. Harassment, discrimination, threats, and publication of private information are not tolerated. Report conduct issues privately through the repository security contact.

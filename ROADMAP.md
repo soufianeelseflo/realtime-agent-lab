@@ -1,34 +1,27 @@
 # Roadmap
 
-## 0.1 — Maintained fork baseline
+## 1.0 — Open reliability foundation
+- Session Spec 1.0
+- deterministic evaluator
+- CLI and GitHub Action
+- multilingual fixtures
+- provider adapters
+- security scanner
 
-- [x] New project identity and scope
-- [x] Consent and acceptable-use policy
-- [x] Provider capability registry
-- [x] Session evaluation utilities and CLI
-- [x] Tests and CI
-- [ ] Replace legacy storage with encrypted credential storage
-- [ ] Validate every renderer-to-main IPC payload
+## 1.1 — Streaming conformance
+- WebRTC trace adapter
+- tool-call truthfulness assertions
+- packet-loss simulation
+- jitter and turn-taking metrics
 
-## 0.2 — Reproducible session replay
+## 1.2 — Community benchmark
+- signed benchmark submissions
+- public result registry
+- adapter certification suite
+- fixture provenance metadata
 
-- [ ] Provider-neutral event schema
-- [ ] Import/export redacted session fixtures
-- [ ] Audio-turn and interruption timeline
-- [ ] Deterministic replay mode
-- [ ] Golden regression reports
-
-## 0.3 — Provider adapters
-
-- [ ] OpenAI Realtime adapter
-- [ ] Anthropic text/tool evaluation adapter
-- [ ] Additional local model backends
-- [ ] Provider comparison reports
-
-## 0.4 — Privacy and security
-
-- [ ] Secret-store integration
-- [ ] Configurable retention periods
-- [ ] Automatic PII redaction
-- [ ] Signed release artifacts
-- [ ] Threat model and security test suite
+## 2.0 — Standardization
+- specification working group
+- stable extension registry
+- compatibility test kit
+- cross-language SDKs

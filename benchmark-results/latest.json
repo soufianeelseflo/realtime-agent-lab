@@ -1,0 +1,413 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-07-31T23:54:46.789Z",
+  "summary": {
+    "sessions": 7,
+    "averageScore": 93.43,
+    "passed": 7,
+    "failed": 0
+  },
+  "reports": [
+    {
+      "schemaVersion": "1.0",
+      "generatedAt": "2026-07-31T23:54:46.788Z",
+      "sessionId": "duplicate-darija",
+      "language": "ary-MA",
+      "score": 96.5,
+      "grade": "A+",
+      "passed": true,
+      "threshold": 0,
+      "metrics": {
+        "latency": {
+          "score": 100,
+          "samples": 1,
+          "p50": 350,
+          "p95": 350,
+          "max": 350
+        },
+        "interruption": {
+          "score": 100,
+          "total": 0,
+          "successful": 0,
+          "recoveryMs": []
+        },
+        "tools": {
+          "score": 100,
+          "calls": 0,
+          "successful": 0,
+          "falseClaims": 0
+        },
+        "duplication": {
+          "score": 65,
+          "outputs": 2,
+          "duplicates": 1
+        },
+        "reconnect": {
+          "score": 100,
+          "failures": 0,
+          "recovered": 0,
+          "recoveryMs": []
+        },
+        "consent": {
+          "score": 100,
+          "captures": 3,
+          "violations": 0
+        },
+        "privacy": {
+          "score": 100,
+          "violations": 0,
+          "detectedSecrets": 0
+        }
+      },
+      "findings": [
+        {
+          "severity": "medium",
+          "code": "output.duplicate",
+          "message": "Duplicate agent responses were detected."
+        }
+      ]
+    },
+    {
+      "schemaVersion": "1.0",
+      "generatedAt": "2026-07-31T23:54:46.788Z",
+      "sessionId": "happy-path-en",
+      "language": "en-US",
+      "score": 100,
+      "grade": "A+",
+      "passed": true,
+      "threshold": 0,
+      "metrics": {
+        "latency": {
+          "score": 100,
+          "samples": 1,
+          "p50": 380,
+          "p95": 380,
+          "max": 380
+        },
+        "interruption": {
+          "score": 100,
+          "total": 1,
+          "successful": 1,
+          "recoveryMs": [
+            250
+          ]
+        },
+        "tools": {
+          "score": 100,
+          "calls": 1,
+          "successful": 1,
+          "falseClaims": 0
+        },
+        "duplication": {
+          "score": 100,
+          "outputs": 1,
+          "duplicates": 0
+        },
+        "reconnect": {
+          "score": 100,
+          "failures": 0,
+          "recovered": 0,
+          "recoveryMs": []
+        },
+        "consent": {
+          "score": 100,
+          "captures": 3,
+          "violations": 0
+        },
+        "privacy": {
+          "score": 100,
+          "violations": 0,
+          "detectedSecrets": 0
+        }
+      },
+      "findings": []
+    },
+    {
+      "schemaVersion": "1.0",
+      "generatedAt": "2026-07-31T23:54:46.788Z",
+      "sessionId": "interruption-ar",
+      "language": "ar-MA",
+      "score": 100,
+      "grade": "A+",
+      "passed": true,
+      "threshold": 0,
+      "metrics": {
+        "latency": {
+          "score": 100,
+          "samples": 1,
+          "p50": 350,
+          "p95": 350,
+          "max": 350
+        },
+        "interruption": {
+          "score": 100,
+          "total": 1,
+          "successful": 1,
+          "recoveryMs": [
+            300
+          ]
+        },
+        "tools": {
+          "score": 100,
+          "calls": 0,
+          "successful": 0,
+          "falseClaims": 0
+        },
+        "duplication": {
+          "score": 100,
+          "outputs": 1,
+          "duplicates": 0
+        },
+        "reconnect": {
+          "score": 100,
+          "failures": 0,
+          "recovered": 0,
+          "recoveryMs": []
+        },
+        "consent": {
+          "score": 100,
+          "captures": 3,
+          "violations": 0
+        },
+        "privacy": {
+          "score": 100,
+          "violations": 0,
+          "detectedSecrets": 0
+        }
+      },
+      "findings": []
+    },
+    {
+      "schemaVersion": "1.0",
+      "generatedAt": "2026-07-31T23:54:46.788Z",
+      "sessionId": "privacy-leak",
+      "language": "en-US",
+      "score": 97.5,
+      "grade": "A+",
+      "passed": true,
+      "threshold": 0,
+      "metrics": {
+        "latency": {
+          "score": 100,
+          "samples": 0,
+          "p50": null,
+          "p95": null,
+          "max": null
+        },
+        "interruption": {
+          "score": 100,
+          "total": 0,
+          "successful": 0,
+          "recoveryMs": []
+        },
+        "tools": {
+          "score": 100,
+          "calls": 0,
+          "successful": 0,
+          "falseClaims": 0
+        },
+        "duplication": {
+          "score": 100,
+          "outputs": 0,
+          "duplicates": 0
+        },
+        "reconnect": {
+          "score": 100,
+          "failures": 0,
+          "recovered": 0,
+          "recoveryMs": []
+        },
+        "consent": {
+          "score": 100,
+          "captures": 1,
+          "violations": 0
+        },
+        "privacy": {
+          "score": 75,
+          "violations": 1,
+          "detectedSecrets": 0
+        }
+      },
+      "findings": [
+        {
+          "severity": "critical",
+          "code": "privacy.leak",
+          "message": "Potential secrets or explicit privacy violations were detected."
+        }
+      ]
+    },
+    {
+      "schemaVersion": "1.0",
+      "generatedAt": "2026-07-31T23:54:46.788Z",
+      "sessionId": "reconnect-recovery",
+      "language": "en-US",
+      "score": 100,
+      "grade": "A+",
+      "passed": true,
+      "threshold": 0,
+      "metrics": {
+        "latency": {
+          "score": 100,
+          "samples": 1,
+          "p50": 400,
+          "p95": 400,
+          "max": 400
+        },
+        "interruption": {
+          "score": 100,
+          "total": 0,
+          "successful": 0,
+          "recoveryMs": []
+        },
+        "tools": {
+          "score": 100,
+          "calls": 0,
+          "successful": 0,
+          "falseClaims": 0
+        },
+        "duplication": {
+          "score": 100,
+          "outputs": 1,
+          "duplicates": 0
+        },
+        "reconnect": {
+          "score": 100,
+          "failures": 1,
+          "recovered": 1,
+          "recoveryMs": [
+            1200
+          ]
+        },
+        "consent": {
+          "score": 100,
+          "captures": 3,
+          "violations": 0
+        },
+        "privacy": {
+          "score": 100,
+          "violations": 0,
+          "detectedSecrets": 0
+        }
+      },
+      "findings": []
+    },
+    {
+      "schemaVersion": "1.0",
+      "generatedAt": "2026-07-31T23:54:46.788Z",
+      "sessionId": "slow-latency-fr",
+      "language": "fr-FR",
+      "score": 80,
+      "grade": "B",
+      "passed": true,
+      "threshold": 0,
+      "metrics": {
+        "latency": {
+          "score": 0,
+          "samples": 1,
+          "p50": 2600,
+          "p95": 2600,
+          "max": 2600
+        },
+        "interruption": {
+          "score": 100,
+          "total": 0,
+          "successful": 0,
+          "recoveryMs": []
+        },
+        "tools": {
+          "score": 100,
+          "calls": 0,
+          "successful": 0,
+          "falseClaims": 0
+        },
+        "duplication": {
+          "score": 100,
+          "outputs": 1,
+          "duplicates": 0
+        },
+        "reconnect": {
+          "score": 100,
+          "failures": 0,
+          "recovered": 0,
+          "recoveryMs": []
+        },
+        "consent": {
+          "score": 100,
+          "captures": 3,
+          "violations": 0
+        },
+        "privacy": {
+          "score": 100,
+          "violations": 0,
+          "detectedSecrets": 0
+        }
+      },
+      "findings": [
+        {
+          "severity": "high",
+          "code": "latency.p95",
+          "message": "P95 response latency is 2600ms."
+        }
+      ]
+    },
+    {
+      "schemaVersion": "1.0",
+      "generatedAt": "2026-07-31T23:54:46.789Z",
+      "sessionId": "tool-false-success",
+      "language": "en-US",
+      "score": 80,
+      "grade": "B",
+      "passed": true,
+      "threshold": 0,
+      "metrics": {
+        "latency": {
+          "score": 100,
+          "samples": 1,
+          "p50": 300,
+          "p95": 300,
+          "max": 300
+        },
+        "interruption": {
+          "score": 100,
+          "total": 0,
+          "successful": 0,
+          "recoveryMs": []
+        },
+        "tools": {
+          "score": 0,
+          "calls": 1,
+          "successful": 0,
+          "falseClaims": 1
+        },
+        "duplication": {
+          "score": 100,
+          "outputs": 1,
+          "duplicates": 0
+        },
+        "reconnect": {
+          "score": 100,
+          "failures": 0,
+          "recovered": 0,
+          "recoveryMs": []
+        },
+        "consent": {
+          "score": 100,
+          "captures": 3,
+          "violations": 0
+        },
+        "privacy": {
+          "score": 100,
+          "violations": 0,
+          "detectedSecrets": 0
+        }
+      },
+      "findings": [
+        {
+          "severity": "critical",
+          "code": "tool.false-success",
+          "message": "The agent claimed tool success without a successful result."
+        }
+      ]
+    }
+  ]
+}

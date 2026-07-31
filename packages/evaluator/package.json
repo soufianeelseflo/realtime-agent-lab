@@ -1,0 +1,12 @@
+{
+  "name": "@realtime-agent-lab/evaluator",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": ".",
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "@realtime-agent-lab/spec": "1.0.0",
+    "@realtime-agent-lab/security": "1.0.0"
+  }
+}

@@ -1,0 +1,16 @@
+name: Bug report
+description: Report a reproducible defect.
+title: "bug: "
+labels: [bug]
+body:
+  - type: textarea
+    attributes:
+      label: Reproduction
+      description: Include a synthetic fixture and exact command.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true

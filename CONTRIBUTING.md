@@ -1,28 +1,9 @@
 # Contributing
 
-## Development
+1. Open an issue describing the failure mode or adapter.
+2. Add or update a synthetic fixture.
+3. Add a deterministic test.
+4. Run `npm run check`.
+5. Submit a focused pull request.
 
-```bash
-npm install
-npm test
-npm run check
-npm start
-```
-
-## Pull requests
-
-1. Open an issue for substantial changes.
-2. Keep each pull request focused.
-3. Add or update tests.
-4. Do not include recordings, API keys, or personal data.
-5. Explain user-visible and security implications.
-6. Confirm that your contribution is compatible with GPL-3.0-or-later.
-
-## Good first contributions
-
-- additional session fixtures;
-- provider adapters;
-- latency and interruption metrics;
-- privacy controls;
-- Windows/macOS/Linux capture fixes;
-- documentation and accessibility improvements.
+Never include real customer audio, screen captures, API keys, access tokens, or personal data. New metrics must document their formula and failure interpretation in `docs/METRICS.md`.

@@ -1,0 +1,11 @@
+{
+  "name": "@realtime-agent-lab/spec",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": ".",
+  "license": "GPL-3.0-or-later",
+  "engines": {
+    "node": ">=20"
+  }
+}

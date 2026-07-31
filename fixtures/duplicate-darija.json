@@ -1,0 +1,51 @@
+{
+  "specVersion": "1.0",
+  "id": "duplicate-darija",
+  "language": "ary-MA",
+  "startedAt": "2026-08-01T00:00:00.000Z",
+  "metadata": {
+    "scenario": "duplicate-output",
+    "expected": "fail"
+  },
+  "events": [
+    {
+      "at": 0,
+      "type": "consent.granted"
+    },
+    {
+      "at": 10,
+      "type": "connection.opened"
+    },
+    {
+      "at": 100,
+      "type": "capture.audio.start"
+    },
+    {
+      "at": 500,
+      "type": "user.speech.start"
+    },
+    {
+      "at": 1300,
+      "type": "user.speech.end",
+      "turnId": "u1"
+    },
+    {
+      "at": 1650,
+      "type": "agent.response.start",
+      "turnId": "a1",
+      "inReplyTo": "u1"
+    },
+    {
+      "at": 2100,
+      "type": "agent.response.end",
+      "turnId": "a1",
+      "text": "واخا، غادي نشوف ليك."
+    },
+    {
+      "at": 2500,
+      "type": "agent.response.end",
+      "turnId": "a2",
+      "text": "واخا، غادي نشوف ليك."
+    }
+  ]
+}

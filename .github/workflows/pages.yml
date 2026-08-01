@@ -1,4 +1,4 @@
-name: Pages
+﻿name: Pages
 on:
   push:
     branches: [main]
@@ -14,15 +14,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
-      - uses: actions/setup-node@v6
+      - uses: actions/setup-node@v7
         with:
           node-version: 24
           cache: npm
-      - uses: actions/configure-pages@v5
+      - uses: actions/configure-pages@v6
       - run: npm ci
       - run: npm run benchmark
       - run: npm run docs:build
-      - uses: actions/upload-pages-artifact@v4
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: site
   deploy:
@@ -35,3 +35,4 @@ jobs:
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
+

@@ -1,4 +1,4 @@
-name: Action Self Test
+﻿name: Action Self Test
 on:
   push:
     branches: [main]
@@ -17,3 +17,4 @@ jobs:
           report: realtime-agent-report.json
       - name: Verify report
         run: test -s realtime-agent-report.json
+

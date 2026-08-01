@@ -1,4 +1,4 @@
-name: Release
+﻿name: Release
 on:
   push:
     tags:
@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
-      - uses: actions/setup-node@v6
+      - uses: actions/setup-node@v7
         with:
           node-version: 24
           cache: npm
@@ -24,3 +24,4 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: gh release create "$GITHUB_REF_NAME" release/*.zip --generate-notes --title "Realtime Agent Lab $GITHUB_REF_NAME"
+

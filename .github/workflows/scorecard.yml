@@ -1,4 +1,4 @@
-name: OpenSSF Scorecard
+﻿name: OpenSSF Scorecard
 on:
   branch_protection_rule:
   schedule:
@@ -19,7 +19,7 @@ jobs:
         with:
           persist-credentials: false
       - name: Run analysis
-        uses: ossf/scorecard-action@v2.4.3
+        uses: ossf/scorecard-action@v2.4.4
         with:
           results_file: results.sarif
           results_format: sarif
@@ -28,3 +28,4 @@ jobs:
         uses: github/codeql-action/upload-sarif@v4
         with:
           sarif_file: results.sarif
+

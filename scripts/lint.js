@@ -1,4 +1,4 @@
-import fs from 'node:fs';
+﻿import fs from 'node:fs';
 import path from 'node:path';
 
 const roots = ['packages', 'scripts', 'tests', 'dist'];
@@ -23,9 +23,13 @@ for (const file of files) {
     console.error(`${file}: tabs are not allowed`);
     failed = true;
   }
+
+  // CRLF is a valid Windows line ending. Remove only the terminal carriage return
+  // before checking for actual trailing spaces or tabs.
   const lines = text.split('\n');
   for (let index = 0; index < lines.length; index += 1) {
-    if (/\s+$/.test(lines[index])) {
+    const line = lines[index].endsWith('\r') ? lines[index].slice(0, -1) : lines[index];
+    if (/[ \t]+$/.test(line)) {
       console.error(`${file}:${index + 1}: trailing whitespace`);
       failed = true;
     }

@@ -1,41 +1,41 @@
 {
-  "name": "realtime-agent-lab",
-  "version": "1.0.0",
-  "private": true,
-  "type": "module",
-  "description": "Open reliability standard, benchmark suite, CLI, and GitHub Action for real-time voice and multimodal AI agents.",
-  "workspaces": [
-    "packages/*"
-  ],
-  "engines": {
-    "node": ">=20"
-  },
-  "scripts": {
-    "test": "node --test packages/*/test/*.test.js tests/*.test.js",
-    "lint": "node scripts/lint.js",
-    "validate:fixtures": "node packages/cli/bin/ral.js benchmark fixtures --output benchmark-results/latest.json",
-    "benchmark": "node packages/cli/bin/ral.js benchmark fixtures --output benchmark-results/latest.json",
-    "check": "npm run lint && npm test && npm run benchmark && node scripts/check-project.js",
-    "docs:build": "node scripts/build-site.js",
-    "prepack": "npm run check"
-  },
-  "keywords": [
-    "realtime-ai",
-    "voice-agents",
-    "multimodal-agents",
-    "agent-evaluation",
-    "benchmark",
-    "github-action",
-    "reliability",
-    "open-standard"
-  ],
-  "license": "GPL-3.0-or-later",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/soufianeelseflo/realtime-agent-lab.git"
-  },
-  "bugs": {
-    "url": "https://github.com/soufianeelseflo/realtime-agent-lab/issues"
-  },
-  "homepage": "https://soufianeelseflo.github.io/realtime-agent-lab/"
+    "name": "realtime-agent-lab",
+    "version": "1.0.2",
+    "private": true,
+    "type": "module",
+    "description": "Open reliability standard, benchmark suite, CLI, and GitHub Action for real-time voice and multimodal AI agents.",
+    "workspaces": [
+        "packages/*"
+    ],
+    "engines": {
+        "node": ">=20"
+    },
+    "scripts": {
+        "test": "node --test",
+        "lint": "node scripts/lint.js",
+        "validate:fixtures": "node packages/cli/bin/ral.js benchmark fixtures --output benchmark-results/latest.json",
+        "benchmark": "node packages/cli/bin/ral.js benchmark fixtures --output benchmark-results/latest.json",
+        "check": "npm run lint && npm test && npm run benchmark && node scripts/check-project.js",
+        "docs:build": "node scripts/build-site.js",
+        "prepack": "npm run check"
+    },
+    "keywords": [
+        "realtime-ai",
+        "voice-agents",
+        "multimodal-agents",
+        "agent-evaluation",
+        "benchmark",
+        "github-action",
+        "reliability",
+        "open-standard"
+    ],
+    "license": "GPL-3.0-or-later",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/soufianeelseflo/realtime-agent-lab.git"
+    },
+    "bugs": {
+        "url": "https://github.com/soufianeelseflo/realtime-agent-lab/issues"
+    },
+    "homepage": "https://soufianeelseflo.github.io/realtime-agent-lab/"
 }
